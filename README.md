@@ -1,4 +1,4 @@
-It is a basic react app in which I have implemented infinite scrolling.
+## Infinite scrolling react app
 
 ### Infinite Scrolling
 
@@ -6,14 +6,13 @@ Infinite scrolling adds the next page as user scrolls down to the bottom through
 
 ## Approach
 
-- Set some default values:
-  - page = 1, limit = 10, hasMore = true
-- Listen to user's scroll behaviour
-- Call getResults() with initial page value
-- As user reaches bottom of the page, set the page to next page and call getResults()
-- Append the data to the existing result state
-- Once user has reached the limit where there in no more content to be load, set `hasMore` variable to `false` so that we don't keep calling getResults() as user tries to scroll down
-- Render result
+1. Set some default values: `page=1`, `limit=10`, `hasMore=true`
+2. Call `getResults()` with initial page value 
+3. Listen to user's scroll behaviour
+4. As user reaches bottom of the page, set the page to next page and call `getResults()`
+5. Append the data to the existing result state
+6. Once user has reached the limit where there in no more content to be load, set `hasMore` variable to `false` so that we don't keep calling getResults() as user tries to scroll down
+7. Render result
 
 P.S.: We could use custom hooks to call the API. Also, there are some existing libraries as which we could use to implement infinite scrolling
 
